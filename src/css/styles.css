@@ -98,4 +98,37 @@ header img {
     margin-top: 2rem;
 }
 
+.table {
+    padding: 1rem 4rem;
+}
+
+#schema {
+    color: white; 
+}
+
+#schema thead th {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 1.3em;
+}
+
+footer {
+    padding: 2rem 4rem; 
+    color: white; 
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 2em;
+    margin-bottom: 0.3rem;
+}
+
+footer h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.7rem;
+}
+
+footer p {
+    color: #367db0;
+}
+
 
