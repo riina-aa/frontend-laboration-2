@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.background-container {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background-image: url(/public/images/yuriy-kovalev-nN1HSDtKdlw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+}
+
+.page {
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container label {
+    display: none;
+}
+
+.search-container input {
+    width: 400px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid #8bb6db;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+}
+
+.search-container input::placeholder {
+    font-size: 1em;
+    font-style: italic;
+    color: grey;
+}
+
+.search-container span {
+    position: absolute;
+    top: 7px; 
+    left: 15px;
+}
+

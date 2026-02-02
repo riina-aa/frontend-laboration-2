@@ -1,37 +1,49 @@
 <!doctype html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/css/styles.css">
-    <title>laboration-2</title>
-  </head>
-  <body>
-    <section class="background-container">
-      <header>
-        <img src="" alt="">
-        <div class="search-container">
-          <label for="search">Sök:</label>
-          <input type="text" name="search" id="search">
-        </div>
-      </header>
-      <main>
-        <section class="intro">
-          <h1>Webbutvecklingsprogrammet</h1>
-          <h2>Ramschema</h2>
-          <p>Här nedanför kan du se ramschemat för Mittuniversitetes webbutvecklingsprogram.</p>
-        </section>
-        <section class="table">
-          <table id="schema"></table>
-        </section>
-      </main>
-      <footer>
-        <h2>Kurs: Frontend-baserad webbutveckling</h2>
-        <h3>Webbutvecklingsprogrammet</h3>
-        <p>Riina Aaltonen - 2025</p>
-      </footer>
-    </section>
-    <script type="module" src="/src/js/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/css/styles.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>laboration-2</title>
+</head>
+
+<body>
+  <section class="background-container"></section>
+  <section class="page">
+    <header>
+      <img src="/public/images/storloggavit.svg" alt="">
+      <div class="search-container">
+        <label for="search">Sök:</label>
+        <input type="text" name="search" id="search" placeholder="Sök efter kurskod eller kursnamn...">
+        <span class="material-symbols-outlined">search</span>
+      </div>
+    </header>
+    <main>
+      <section class="intro">
+        <h1>Webbutvecklingsprogrammet</h1>
+        <h2>Ramschema</h2>
+        <p>Här nedanför kan du se ramschemat för Mittuniversitetes webbutvecklingsprogram.</p>
+      </section>
+      <section class="table">
+        <table id="schema"></table>
+      </section>
+    </main>
+    <footer>
+      <h2>Kurs: Frontend-baserad webbutveckling</h2>
+      <h3>Webbutvecklingsprogrammet</h3>
+      <p>Riina Aaltonen - 2025</p>
+    </footer>
+  </section>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
 </html>
