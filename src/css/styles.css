@@ -4,6 +4,16 @@
     padding: 0;
 }
 
+body h1, 
+body h2,
+body h3 {
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+body p {
+    font-family: "Raleway", sans-serif;
+}
+
 .background-container {
     position: fixed;
     inset: 0;
@@ -44,7 +54,7 @@ header img {
     width: 400px;
     height: 40px;
     border-radius: 25px;
-    border: 1px solid #8bb6db;
+    border: none;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 3rem;
@@ -56,9 +66,36 @@ header img {
     color: grey;
 }
 
-.search-container span {
+.search-container img {
     position: absolute;
     top: 7px; 
     left: 15px;
+    height: 24px;
+    width: auto;
 }
+
+.intro {
+    padding: 7rem 4rem;
+    color: white; 
+}
+
+.intro h1 {
+    font-size: 4em;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.intro h2 {
+    font-size: 3em;
+}
+
+.intro p {
+    margin-top: 2rem;
+}
+
 
