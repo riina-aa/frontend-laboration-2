@@ -32,23 +32,63 @@ function displayData(kurser) {
     const tableCourseName = document.querySelector("#kursnamn");
     const tableCourseProg = document.querySelector("#progression");
 
-    tableCourseName.innerHTML = ""; 
+    tableCourseCode.innerHTML = ""
+    tableCourseName.innerHTML = "";
+    tableCourseProg.innerHTML = "";;
 
     kurser.forEach(kurs => {
+        tableCourseCode.innerHTML += `<li>${kurs.code}</li>`;
         tableCourseName.innerHTML += `<li>${kurs.coursename}</li>`;
+        tableCourseProg.innerHTML += `<li>${kurs.progression}</li>`;
     });
 };
+
+let fallande = true;
 
 function sortData() {
 
     //Sortera kursnamn i bokstavsordning
     let courseNameTitle = document.querySelector("#click-name");
+    let courseCodeTitle = document.querySelector("#click-code")
 
     courseNameTitle.addEventListener("click", () => {
-        courseData.sort((a, b) =>
-            a.coursename.localeCompare(b.coursename)
-        );
-        
+
+        if (fallande) {
+            courseData.sort((a, b) =>
+                a.coursename.localeCompare(b.coursename)
+            );
+
+            fallande = !fallande;
+        } else {
+            courseData.sort((a, b) =>
+                b.coursename.localeCompare(a.coursename)
+            );
+
+            fallande = !fallande;
+        }
+
+        displayData(courseData);
+    });
+
+    courseCodeTitle.addEventListener("click", () => {
+
+        if (fallande) {
+            courseData.sort((a, b) =>
+                a.code.localeCompare(b.code)
+            );
+
+            fallande = !fallande;
+        } else {
+            courseData.sort((a, b) =>
+                b.code.localeCompare(a.code)
+            );
+
+            fallande = !fallande;
+        }
+
         displayData(courseData);
     });
 };
+
+
+
