@@ -6,7 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
 //funktion för att starta igång koden
 function init() {
     getData();
+    sortData();
 }
+
+let courseData = [];
+
 
 //funktion för att hämta data
 async function getData() {
@@ -14,9 +18,9 @@ async function getData() {
 
     try {
         const response = await fetch(url);
-        const data = await response.json();
+        courseData = await response.json();
 
-        displayData(data);
+        displayData(courseData);
 
     } catch (error) {
         console.error("Felmeddelande: " + error)
@@ -24,16 +28,27 @@ async function getData() {
 }
 
 function displayData(kurser) {
-    const tableDataEl = document.querySelector("#tbody");
+    const tableCourseCode = document.querySelector("#kurskod");
+    const tableCourseName = document.querySelector("#kursnamn");
+    const tableCourseProg = document.querySelector("#progression");
+
+    tableCourseName.innerHTML = ""; 
 
     kurser.forEach(kurs => {
-        tableDataEl.innerHTML += `
-            <tr>
-                <td class="first">${kurs.code}</td>
-                <td class="middle">${kurs.coursename}</td>
-                <td class="last">${kurs.progression}</td>
-            </tr> 
-        `;
+        tableCourseName.innerHTML += `<li>${kurs.coursename}</li>`;
     });
 };
 
+function sortData() {
+
+    //Sortera kursnamn i bokstavsordning
+    let courseNameTitle = document.querySelector("#click-name");
+
+    courseNameTitle.addEventListener("click", () => {
+        courseData.sort((a, b) =>
+            a.coursename.localeCompare(b.coursename)
+        );
+        
+        displayData(courseData);
+    });
+};

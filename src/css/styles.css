@@ -44,6 +44,10 @@ header img {
 
 .search-container {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem; 
+
 }
 
 .search-container label {
@@ -75,7 +79,7 @@ header img {
 }
 
 .intro {
-    padding: 7rem 4rem;
+    padding: 7rem 4rem 2rem 4em;
     color: white; 
 }
 
@@ -96,60 +100,18 @@ header img {
 
 .intro p {
     margin-top: 2rem;
+    margin-bottom: 5rem;
 }
 
 .table {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
     padding: 4rem;
     background-color: #6197b86d;
     justify-items: center;
 }
 
-table#schema {
-    color: white; 
-    border-spacing: 5rem 0rem;
-    border-radius: 25px;
-}
-
-#schema thead th {
-    font-family: "Bricolage Grotesque", sans-serif;
-    font-size: 1.6em;
-    text-align: start;
-    padding: 1rem;
-}
-
-#schema thead th:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-#schema thead #col2 {
-    width: 500px;
-}
-
-#schema tbody {
-    font-family: "Montserrat", sans-serif;
-}
-
-#tbody td {
-    padding: 1rem;
-    font-size: 1.2em;
-}
-
-#tbody td.first:hover,
-#tbody td.middle:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-#tbody td.first {
-    text-transform: uppercase;
-    max-width: fit-content;
-}
-
-#tbody td.last {
-    text-align: center;
-    max-width: fit-content;
-}
 
 footer {
     margin-top: 4rem;
