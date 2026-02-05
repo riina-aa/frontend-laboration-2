@@ -67,28 +67,33 @@ function sortData() {
             fallande = !fallande;
         }
 
-        displayData(courseData);
+        displayData(courseData); //Skriv ut ny sorterad lista
     });
 
+    //Sortera kurskod i bokstavsordning
     courseCodeTitle.addEventListener("click", () => {
 
+        //kontrollerar vilken ordning listan är sorterad i 
         if (fallande) {
             courseData.sort((a, b) =>
                 a.code.localeCompare(b.code)
             );
 
-            fallande = !fallande;
+            fallande = !fallande; //Ändrar true till false
         } else {
             courseData.sort((a, b) =>
                 b.code.localeCompare(a.code)
             );
 
-            fallande = !fallande;
+            fallande = !fallande; //Ändrar false till true
         }
 
-        displayData(courseData);
+        displayData(courseData); //Skriv ut ny sorterad lista
     });
 };
 
+function filteredData() {
+
+}
 
 
