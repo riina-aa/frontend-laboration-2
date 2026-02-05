@@ -1,4 +1,6 @@
 
+let courseData = [];
+
 document.addEventListener("DOMContentLoaded", () => {
     init();
 }); //Ladda sidan innan kod körs
@@ -7,10 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
 function init() {
     getData();
     sortData();
+    document.querySelector("#search").addEventListener("input", () => {
+        filterData();
+    });
 }
-
-let courseData = [];
-
 
 //funktion för att hämta data
 async function getData() {
@@ -49,7 +51,8 @@ function sortData() {
 
     //Sortera kursnamn i bokstavsordning
     let courseNameTitle = document.querySelector("#click-name");
-    let courseCodeTitle = document.querySelector("#click-code")
+    let courseCodeTitle = document.querySelector("#click-code");
+    let courseProgTitle = document.querySelector("#click-prog")
 
     courseNameTitle.addEventListener("click", () => {
 
@@ -90,9 +93,40 @@ function sortData() {
 
         displayData(courseData); //Skriv ut ny sorterad lista
     });
-};
 
-function filteredData() {
+    courseProgTitle.addEventListener("click", () => {
+
+        //kontrollerar vilken ordning listan är sorterad i 
+        if (fallande) {
+            courseData.sort((a, b) =>
+                a.progression.localeCompare(b.progression)
+            );
+
+            fallande = !fallande; //Ändrar true till false
+        } else {
+            courseData.sort((a, b) =>
+                b.progression.localeCompare(a.progression)
+            );
+
+            fallande = !fallande; //Ändrar false till true
+        }
+
+        displayData(courseData); //Skriv ut ny sorterad lista
+    });
+}
+
+
+function filterData() { //funktion för att filtrera datan
+
+    let searchPhrase = document.querySelector("#search").value; //hämtar sökrutans värde
+    
+    //tar sökrutans värde och jämför med datan och sorterar ut det som matchar sökvärdet
+    let filteredData = courseData.filter((kurs) =>
+        kurs.coursename.toLowerCase().includes(searchPhrase) ||
+        kurs.code.toLowerCase().includes(searchPhrase)
+    );
+
+    displayData(filteredData); //tar den filtrerade datan och skriver ut i tabellen
 
 }
 
