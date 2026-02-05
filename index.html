@@ -1,13 +1,73 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>laboration-2</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="/src/css/styles.css">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search,table" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <title>laboration-2</title>
+</head>
+
+<body>
+  <section class="background-container"></section>
+  <section class="page">
+    <header>
+      <img src="/public/images/storloggavit.svg" alt="">
+    </header>
+    <main>
+      <section class="intro">
+        <h1>Webbutvecklingsprogrammet</h1>
+        <div class="icon-text">
+          <img src="/public/images/table-icon.svg" alt="">
+          <h2>Ramschema</h2>
+        </div>
+        <p>Här nedanför kan du se ramschemat för Mittuniversitetes webbutvecklingsprogram.</p>
+        <div class="search-container">
+          <label for="search">Sök:</label>
+          <input type="text" name="search" id="search" placeholder="Sök efter kurskod eller kursnamn...">
+          <img src="/public/images/search-icon.svg" alt="">
+        </div>
+      </section>
+      <section class="table">
+        <table id="schema">
+          <thead>
+            <tr>
+              <th id="click-code">Kurskod</th>
+              <th id="click-name">Kursnamn</th>
+              <th id="click-prog">Progression</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <h2>Kurs: Frontend-baserad webbutveckling</h2>
+      <h3>Webbutvecklingsprogrammet</h3>
+      <p>Riina Aaltonen - 2025</p>
+    </footer>
+  </section>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+    }
+  </style>
+  <script type="module" src="src/js/main.js"></script>
+</body>
+
 </html>

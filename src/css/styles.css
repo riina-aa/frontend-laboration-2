@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body h1, 
+body h2,
+body h3 {
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+body p {
+    font-family: "Montserrat", sans-serif;
+}
+
+.background-container {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background-image: url(/public/images/yuriy-kovalev-nN1HSDtKdlw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+}
+
+.page {
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem; 
+
+}
+
+.search-container label {
+    display: none;
+}
+
+.search-container input {
+    width: 400px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+}
+
+.search-container input::placeholder {
+    font-size: 1em;
+    font-style: italic;
+    color: grey;
+}
+
+.search-container img {
+    position: absolute;
+    top: 7px; 
+    left: 15px;
+    height: 24px;
+    width: auto;
+}
+
+.intro {
+    padding: 7rem 4rem 2rem 4em;
+    color: white; 
+}
+
+.intro h1 {
+    font-size: 4em;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.intro h2 {
+    font-size: 3em;
+}
+
+.intro p {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.table {
+    padding: 4rem;
+    background-color: #6197b86d;
+    justify-items: center;
+}
+
+table#schema {
+    color: white; 
+    border-spacing: 5rem 0rem;
+    border-radius: 25px;
+}
+
+#schema thead th {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 1.6em;
+    text-align: start;
+    padding: 1rem;
+}
+
+#schema thead th:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#schema thead #click-name {
+    width: 500px;
+}
+
+#schema tbody {
+    font-family: "Montserrat", sans-serif;
+}
+
+#tbody td {
+    padding: 1rem;
+    font-size: 1.2em;
+}
+
+#tbody td.first:hover,
+#tbody td.middle:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#tbody td.first {
+    text-transform: uppercase;
+    max-width: fit-content;
+}
+
+#tbody td.last {
+    text-align: center;
+    max-width: fit-content;
+}
+
+
+footer {
+    margin-top: 4rem;
+    padding: 2rem 4rem; 
+    color: white; 
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 2em;
+    margin-bottom: 0.3rem;
+}
+
+footer h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.7rem;
+}
+
+footer p {
+    color: #367db0;
+}
+
+
