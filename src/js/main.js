@@ -37,9 +37,9 @@ function displayData(kurser) {
     kurser.forEach(kurs => {
         table.innerHTML += `
         <tr>
-            <td>${kurs.code}</td>
-            <td>${kurs.coursename}</td>
-            <td>${kurs.progression}</td>
+            <td class="first">${kurs.code}</td>
+            <td class="middle">${kurs.coursename}</td>
+            <td class="last">${kurs.progression}</td>
         </tr>`;
         
     });
