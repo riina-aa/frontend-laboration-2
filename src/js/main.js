@@ -30,18 +30,18 @@ async function getData() {
 }
 
 function displayData(kurser) {
-    const tableCourseCode = document.querySelector("#kurskod");
-    const tableCourseName = document.querySelector("#kursnamn");
-    const tableCourseProg = document.querySelector("#progression");
+    const table = document.querySelector("#tbody");
 
-    tableCourseCode.innerHTML = ""
-    tableCourseName.innerHTML = "";
-    tableCourseProg.innerHTML = "";;
+    table.innerHTML = ""
 
     kurser.forEach(kurs => {
-        tableCourseCode.innerHTML += `<li>${kurs.code}</li>`;
-        tableCourseName.innerHTML += `<li>${kurs.coursename}</li>`;
-        tableCourseProg.innerHTML += `<li>${kurs.progression}</li>`;
+        table.innerHTML += `
+        <tr>
+            <td>${kurs.code}</td>
+            <td>${kurs.coursename}</td>
+            <td>${kurs.progression}</td>
+        </tr>`;
+        
     });
 };
 
